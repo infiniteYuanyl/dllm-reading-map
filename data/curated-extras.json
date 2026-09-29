@@ -398,5 +398,21 @@
     "whyReadZh": "首次对 masked、uniform 与 Gaussian 三类 dLLM 的并行采样能力给出细粒度理论比较，并证明不同范式之间可出现可证分离。",
     "sourceCollections": ["curated-2026"],
     "lastVerified": "2026-09-22"
+  },
+  {
+    "id": "arxiv:2609.15903",
+    "title": "Discrete Beckmann Transport Models for One-Step Language Modeling and Reasoning",
+    "authors": ["Sophia Tang", "Shiyi Wang"],
+    "year": 2026,
+    "published": "2026-09-14",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2609.15903",
+    "category": "flow",
+    "tags": ["flow-maps", "Beckmann-transport", "one-step-generation", "fixed-point", "reasoning"],
+    "tier": "frontier",
+    "essentialOrder": null,
+    "whyReadZh": "以时间无关的离散 Beckmann flow 直接学习固定点生成映射，无需教师模型蒸馏即可实现一到少步语言生成，并将额外函数评估转化为迭代精炼。",
+    "sourceCollections": ["curated-2026"],
+    "lastVerified": "2026-09-30"
   }
 ]
