@@ -19,6 +19,7 @@ export type Paper = {
   essentialOrder: number | null;
   whyReadZh: string | null;
   sourceCollections: string[];
+  sourceReferenceIndexes?: Record<string, number>;
   lastVerified: string;
 };
 

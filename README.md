@@ -6,7 +6,7 @@
 
 ![dLLM Reading Map](public/og.png)
 
-项目以“方法类别与研究方向”为主线、以时间为排序和筛选维度，避免把快速增长的领域压成一份难以使用的超长清单。当前完整收录 Sander Dieleman 2026 年文章 *Continuous diffusion language models* 的 81 条参考文献，并补充 26 篇离散扩散、大模型化、AR 转换、智能体与 2026 年最新工作，共 107 篇。课程与学习资源单独维护，不计入论文数量。
+项目以“方法类别与研究方向”为主线、以时间为排序和筛选维度，避免把快速增长的领域压成一份难以使用的超长清单。当前完整收录 Sander Dieleman 2026 年文章 *Continuous diffusion language models* 的 81 条参考文献，并补充 36 篇离散扩散、大模型化、Flow Map、AR 转换、智能体与 2026 年最新工作，共 117 篇。课程、长文与其他学习资源单独维护，不计入论文数量。
 
 ## 设计原则
 
@@ -38,7 +38,7 @@ npm run build
 
 - `data/sander-2026.json`：博客 81 条完整参考文献，保留 `sourceIndex`。
 - `data/curated-extras.json`：独立核对的一手论文元数据与前沿补充。
-- `data/resources.json`：公开课程与学习资源；首条收录 Penn CIS 6270: Discrete Generative Models。
+- `data/resources.json`：公开课程与学习资源，包括 Penn CIS 6270 与 Sander Dieleman 的 Flow Maps 进阶长文。
 - `scripts/import_sander_refs.py`：从文章 HTML 可复现地生成首批数据。
 - `scripts/validate-data.mjs`：检查 schema、重复 ID、标题、类别和阅读路径。
 
@@ -57,6 +57,7 @@ npm run build
 ## 来源与致谢
 
 - [Sander Dieleman, *Continuous diffusion language models*](https://sander.ai/2026/08/24/continuous-dlms.html?v=1)：首版 81 条参考文献的来源。
+- [Sander Dieleman, *Learning the integral of a diffusion model*](https://sander.ai/2026/05/06/flow-maps.html)：作为 Flow Map 进阶导读；从其 74 条参考文献中筛选 20 篇与 dLLM 和核心 Flow Map 方法直接相关的经典工作，并保留第二套来源编号。图像指标、逆问题和纯视觉应用等旁支不机械导入。
 - [AIDASLab/Awesome-Diffusion-LLM](https://github.com/AIDASLab/Awesome-Diffusion-LLM)：领域 watchlist 与交叉核查来源。其仓库未声明许可证，因此本站没有复制其 README、分类说明或 Remark；新增条目重新依据论文一手页面整理。
 - 所有论文归其作者与出版方所有；本站不转载论文摘要或正文。
 

@@ -35,6 +35,13 @@ for (const [index, paper] of papers.entries()) {
   }
   if (!Array.isArray(paper.authors) || paper.authors.length === 0) errors.push(`${label}: authors must be a non-empty array.`);
   if (!Array.isArray(paper.tags) || paper.tags.length === 0) errors.push(`${label}: tags must be a non-empty array.`);
+  if (paper.sourceReferenceIndexes) {
+    for (const [source, sourceIndex] of Object.entries(paper.sourceReferenceIndexes)) {
+      if (!source || !Number.isInteger(sourceIndex) || sourceIndex < 1) {
+        errors.push(`${label}: invalid source reference index for ${source || 'unknown source'}.`);
+      }
+    }
+  }
   if (!allowedCategories.has(paper.category)) errors.push(`${label}: unknown category ${paper.category}.`);
   if (!allowedTiers.has(paper.tier)) errors.push(`${label}: unknown tier ${paper.tier}.`);
   if (!/^https:\/\//.test(paper.url)) errors.push(`${label}: URL must use HTTPS.`);
@@ -58,9 +65,10 @@ for (const paper of essential) {
 }
 
 const resourceRequired = [
-  'id', 'type', 'title', 'institution', 'instructors', 'term', 'url', 'level',
-  'descriptionZh', 'whyUsefulZh', 'topics', 'lastVerified',
+  'id', 'type', 'title', 'creators', 'source', 'year', 'url', 'level',
+  'descriptionZh', 'whyUsefulZh', 'tags', 'featured', 'lastVerified',
 ];
+const allowedResourceTypes = new Set(['blog', 'course']);
 const seenResourceIds = new Set();
 const seenResourceUrls = new Set();
 
@@ -71,9 +79,11 @@ for (const [index, resource] of resources.entries()) {
       errors.push(`${label}: missing ${field}.`);
     }
   }
-  if (resource.type !== 'course') errors.push(`${label}: unsupported resource type ${resource.type}.`);
-  if (!Array.isArray(resource.instructors) || resource.instructors.length === 0) errors.push(`${label}: instructors must be a non-empty array.`);
-  if (!Array.isArray(resource.topics) || resource.topics.length === 0) errors.push(`${label}: topics must be a non-empty array.`);
+  if (!allowedResourceTypes.has(resource.type)) errors.push(`${label}: unsupported resource type ${resource.type}.`);
+  if (!Array.isArray(resource.creators) || resource.creators.length === 0) errors.push(`${label}: creators must be a non-empty array.`);
+  if (!Array.isArray(resource.tags) || resource.tags.length === 0) errors.push(`${label}: tags must be a non-empty array.`);
+  if (!Number.isInteger(resource.year)) errors.push(`${label}: year must be an integer.`);
+  if (typeof resource.featured !== 'boolean') errors.push(`${label}: featured must be a boolean.`);
   if (!/^https:\/\//.test(resource.url)) errors.push(`${label}: URL must use HTTPS.`);
   if (resource.codeUrl && !/^https:\/\//.test(resource.codeUrl)) errors.push(`${label}: code URL must use HTTPS.`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(resource.lastVerified)) errors.push(`${label}: invalid verification date ${resource.lastVerified}.`);

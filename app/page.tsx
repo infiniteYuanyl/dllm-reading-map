@@ -7,7 +7,7 @@ import {
   latestPapers,
   papers,
 } from '@/lib/papers';
-import { resources } from '@/lib/resources';
+import { resources, resourceTypeLabels } from '@/lib/resources';
 
 const coreCategoryIds = ['discrete', 'continuous', 'hybrid', 'flow', 'latent', 'systems', 'agents'];
 
@@ -25,7 +25,7 @@ export default function Home() {
           <a href="#start">从这里开始</a>
           <a href="#map">方法地图</a>
           <a href="#library">论文库</a>
-          <a href="#resources">课程资源</a>
+          <a href="#resources">学习资源</a>
           <a href="#updates">如何更新</a>
         </div>
         <a
@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> A FIELD GUIDE · SEP 2026</p>
+          <p className="eyebrow"><span /> A FIELD GUIDE · OCT 2026</p>
           <h1>
             从 <em>Mask</em> 到 <em>Flow</em>，<br />
             读懂扩散语言模型。
@@ -69,10 +69,10 @@ export default function Home() {
       </section>
 
       <section className="stats" aria-label="论文库概况">
-        <div><strong>{papers.length}</strong><span>篇精选论文<br />单一数据源</span></div>
+        <div><strong>{papers.length}</strong><span>篇精选论文<br />持续维护</span></div>
         <div><strong>81/81</strong><span>Sander 博客<br />参考文献已收录</span></div>
         <div><strong>{categories.length}</strong><span>研究方向<br />交叉索引</span></div>
-        <div className="stats-note"><span className="status-dot" />VERIFIED<br />2026.09.22</div>
+        <div className="stats-note"><span className="status-dot" />VERIFIED<br />2026.10.12</div>
       </section>
 
       <section className="section path-section" id="start">
@@ -166,7 +166,7 @@ export default function Home() {
             <p className="eyebrow"><span /> COURSES & LEARNING</p>
             <h2>课程与<br />学习资源</h2>
           </div>
-          <p>课程与论文分开收录。优先选择提供公开教学大纲、讲义或代码，并能系统连接扩散语言模型理论与实践的学习资源。</p>
+          <p>学习资源与论文分开收录。优先选择能系统连接扩散语言模型理论、方法与实践的课程、长文和公开材料。</p>
         </div>
 
         <div className="learning-list">
@@ -174,20 +174,20 @@ export default function Home() {
             <article className="learning-card" key={resource.id}>
               <div className="learning-index">
                 <span>{String(index + 1).padStart(2, '0')}</span>
-                <b>{resource.type}</b>
+                <b>{resourceTypeLabels[resource.type]}</b>
               </div>
               <div className="learning-main">
-                <p className="learning-meta">{resource.institution} · {resource.term} · {resource.level}</p>
+                <p className="learning-meta">{resource.source} · {resource.year} · {resource.level}</p>
                 <h3><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a></h3>
-                <p className="learning-instructor">Instructor · {resource.instructors.join(', ')}</p>
+                <p className="learning-instructor">{resource.type === 'course' ? 'Instructor' : 'Author'} · {resource.creators.join(', ')}</p>
                 <p className="learning-description">{resource.descriptionZh}</p>
                 <p className="learning-why"><span>为什么推荐</span>{resource.whyUsefulZh}</p>
                 <div className="learning-topics">
-                  {resource.topics.map((topic) => <span key={topic}>{topic}</span>)}
+                  {resource.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
               </div>
               <div className="learning-links">
-                <a href={resource.url} target="_blank" rel="noreferrer">课程主页 <span>↗</span></a>
+                <a href={resource.url} target="_blank" rel="noreferrer">{resource.type === 'course' ? '课程主页' : '阅读全文'} <span>↗</span></a>
                 {resource.codeUrl && <a href={resource.codeUrl} target="_blank" rel="noreferrer">课程代码 <span>↗</span></a>}
               </div>
             </article>
@@ -216,11 +216,14 @@ export default function Home() {
           <a href="https://sander.ai/2026/08/24/continuous-dlms.html?v=1" target="_blank" rel="noreferrer">
             <span>01</span><div><b>Sander Dieleman · Continuous diffusion language models</b><p>完整导入其 81 条参考文献，并保留原始编号。</p></div><i>↗</i>
           </a>
+          <a href="https://sander.ai/2026/05/06/flow-maps.html" target="_blank" rel="noreferrer">
+            <span>02</span><div><b>Sander Dieleman · Learning the integral of a diffusion model</b><p>作为 Flow Map 进阶导读；从 74 条参考文献中筛选 20 篇与 dLLM 和核心方法直接相关的经典工作，并保留来源编号。</p></div><i>↗</i>
+          </a>
           <a href="https://github.com/AIDASLab/Awesome-Diffusion-LLM" target="_blank" rel="noreferrer">
-            <span>02</span><div><b>AIDASLab · Awesome-Diffusion-LLM</b><p>作为领域 watchlist 与交叉核查来源；本站分类、数据与中文导读独立整理。</p></div><i>↗</i>
+            <span>03</span><div><b>AIDASLab · Awesome-Diffusion-LLM</b><p>作为领域 watchlist 与交叉核查来源；本站分类、数据与中文导读独立整理。</p></div><i>↗</i>
           </a>
           <div className="source-item">
-            <span>03</span><div><b>Primary records · arXiv / proceedings</b><p>标题、作者、首次公开日期和链接以一手论文页面为准。</p></div><i>✓</i>
+            <span>04</span><div><b>Primary records · arXiv / proceedings</b><p>标题、作者、首次公开日期和链接以一手论文页面为准。</p></div><i>✓</i>
           </div>
         </div>
       </section>
@@ -230,7 +233,7 @@ export default function Home() {
         <p>OPEN, CURATED, BUILT FOR LEARNING.</p>
         <p>
           <a href="https://github.com/zju-pil-lab/dllm-reading-map" target="_blank" rel="noreferrer">GITHUB ↗</a>
-          {' · '}LAST VERIFIED · 2026.09.22
+          {' · '}LAST VERIFIED · 2026.10.12
         </p>
       </footer>
     </main>

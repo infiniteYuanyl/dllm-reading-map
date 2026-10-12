@@ -162,6 +162,9 @@ export default function PaperExplorer({ papers }: { papers: Paper[] }) {
                   {paper.tier === 'essential' && <b>必读</b>}
                   {paper.tier === 'frontier' && <b className="frontier-flag">前沿</b>}
                   {paper.sourceCollections.includes('sander-2026') && <i>Sander # {paper.sourceIndex}</i>}
+                  {paper.sourceReferenceIndexes?.['sander-flow-maps-2026'] && (
+                    <i>Flow Maps # {paper.sourceReferenceIndexes['sander-flow-maps-2026']}</i>
+                  )}
                 </div>
                 <h3><a href={paper.url} target="_blank" rel="noreferrer">{paper.title}</a></h3>
                 <p className="catalog-authors">{formatAuthors(paper.authors)}</p>

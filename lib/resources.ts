@@ -1,19 +1,27 @@
 import resourceData from '@/data/resources.json';
 
+export type ResourceType = 'blog' | 'course';
+
 export type LearningResource = {
   id: string;
-  type: 'course';
+  type: ResourceType;
   title: string;
-  institution: string;
-  instructors: string[];
-  term: string;
+  creators: string[];
+  source: string;
+  year: number;
   url: string;
   codeUrl?: string;
   level: string;
   descriptionZh: string;
   whyUsefulZh: string;
-  topics: string[];
+  tags: string[];
+  featured: boolean;
   lastVerified: string;
 };
 
 export const resources = resourceData as LearningResource[];
+
+export const resourceTypeLabels: Record<ResourceType, string> = {
+  blog: 'Blog · 长文',
+  course: 'Course · 课程',
+};

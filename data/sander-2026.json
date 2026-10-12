@@ -138,6 +138,9 @@
     "id": "arxiv:2006.11239",
     "sourceKey": "ddpm",
     "sourceIndex": 6,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 4
+    },
     "title": "Denoising Diffusion Probabilistic Models",
     "authors": [
       "Ho",
@@ -685,6 +688,9 @@
     "sourceCollections": [
       "sander-2026"
     ],
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 59
+    },
     "lastVerified": "2026-09-04"
   },
   {
@@ -1135,6 +1141,9 @@
     "id": "arxiv:2602.16813",
     "sourceKey": "fmlm",
     "sourceIndex": 39,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 57
+    },
     "title": "Flow Map Language Models: One-step Language Modeling via Continuous Denoising",
     "authors": [
       "Lee",
@@ -1168,6 +1177,9 @@
     "id": "arxiv:2011.13456",
     "sourceKey": "sde",
     "sourceIndex": 40,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 5
+    },
     "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
     "authors": [
       "Song",
@@ -1282,6 +1294,9 @@
     "id": "arxiv:2210.02747",
     "sourceKey": "flowmatching",
     "sourceIndex": 44,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 7
+    },
     "title": "Flow Matching for Generative Modeling",
     "authors": [
       "Lipman",
@@ -1311,6 +1326,9 @@
     "id": "arxiv:2406.07507",
     "sourceKey": "fmm",
     "sourceIndex": 45,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 1
+    },
     "title": "Flow map matching with stochastic interpolants: A mathematical framework for consistency models",
     "authors": [
       "Boffi",
@@ -1367,6 +1385,9 @@
     "id": "arxiv:2303.01469",
     "sourceKey": "cm",
     "sourceIndex": 47,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 11
+    },
     "title": "Consistency Models",
     "authors": [
       "Song",
@@ -1486,6 +1507,9 @@
     "id": "arxiv:2505.18825",
     "sourceKey": "selfdist",
     "sourceIndex": 51,
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 2
+    },
     "title": "How to build a consistency model: Learning flow maps via self-distillation",
     "authors": [
       "Boffi",
@@ -1540,6 +1564,9 @@
     "sourceCollections": [
       "sander-2026"
     ],
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 56
+    },
     "lastVerified": "2026-09-04"
   },
   {
@@ -1570,6 +1597,9 @@
     "sourceCollections": [
       "sander-2026"
     ],
+    "sourceReferenceIndexes": {
+      "sander-flow-maps-2026": 58
+    },
     "lastVerified": "2026-09-04"
   },
   {
