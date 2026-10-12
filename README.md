@@ -6,7 +6,7 @@
 
 ![dLLM Reading Map](public/og.png)
 
-项目以“方法类别与研究方向”为主线、以时间为排序和筛选维度，避免把快速增长的领域压成一份难以使用的超长清单。当前完整收录 Sander Dieleman 2026 年文章 *Continuous diffusion language models* 的 81 条参考文献，并补充 36 篇离散扩散、大模型化、Flow Map、AR 转换、智能体与 2026 年最新工作，共 117 篇。课程、长文与其他学习资源单独维护，不计入论文数量。
+项目以“方法类别与研究方向”为主线、以时间为排序和筛选维度，避免把快速增长的领域压成一份难以使用的超长清单。当前完整收录 Sander Dieleman 2026 年文章 *Continuous diffusion language models* 的 81 条参考文献，并补充 26 篇离散扩散、大模型化、AR 转换、智能体与 2026 年最新工作，共 107 篇。课程、长文与其他学习资源单独维护，不计入论文数量。
 
 ## 设计原则
 
@@ -57,7 +57,7 @@ npm run build
 ## 来源与致谢
 
 - [Sander Dieleman, *Continuous diffusion language models*](https://sander.ai/2026/08/24/continuous-dlms.html?v=1)：首版 81 条参考文献的来源。
-- [Sander Dieleman, *Learning the integral of a diffusion model*](https://sander.ai/2026/05/06/flow-maps.html)：作为 Flow Map 进阶导读；从其 74 条参考文献中筛选 20 篇与 dLLM 和核心 Flow Map 方法直接相关的经典工作，并保留第二套来源编号。图像指标、逆问题和纯视觉应用等旁支不机械导入。
+- [Sander Dieleman, *Learning the integral of a diffusion model*](https://sander.ai/2026/05/06/flow-maps.html)：作为 Flow Map 进阶导读；其参考文献中与 dLLM 直接相关的语言建模论文及必要理论入口保留第二套来源编号，通用扩散与少步 Flow Map 方法归入 Diffusion + Flow Reading Map。
 - [AIDASLab/Awesome-Diffusion-LLM](https://github.com/AIDASLab/Awesome-Diffusion-LLM)：领域 watchlist 与交叉核查来源。其仓库未声明许可证，因此本站没有复制其 README、分类说明或 Remark；新增条目重新依据论文一手页面整理。
 - 所有论文归其作者与出版方所有；本站不转载论文摘要或正文。
 

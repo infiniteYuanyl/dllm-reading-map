@@ -217,7 +217,7 @@ export default function Home() {
             <span>01</span><div><b>Sander Dieleman · Continuous diffusion language models</b><p>完整导入其 81 条参考文献，并保留原始编号。</p></div><i>↗</i>
           </a>
           <a href="https://sander.ai/2026/05/06/flow-maps.html" target="_blank" rel="noreferrer">
-            <span>02</span><div><b>Sander Dieleman · Learning the integral of a diffusion model</b><p>作为 Flow Map 进阶导读；从 74 条参考文献中筛选 20 篇与 dLLM 和核心方法直接相关的经典工作，并保留来源编号。</p></div><i>↗</i>
+            <span>02</span><div><b>Sander Dieleman · Learning the integral of a diffusion model</b><p>作为 Flow Map 进阶导读；dLLM 直接相关论文保留来源编号，通用基础方法归入 Diffusion + Flow Reading Map。</p></div><i>↗</i>
           </a>
           <a href="https://github.com/AIDASLab/Awesome-Diffusion-LLM" target="_blank" rel="noreferrer">
             <span>03</span><div><b>AIDASLab · Awesome-Diffusion-LLM</b><p>作为领域 watchlist 与交叉核查来源；本站分类、数据与中文导读独立整理。</p></div><i>↗</i>
