@@ -1,4 +1,5 @@
 import PaperExplorer from '@/components/paper-explorer';
+import ThemeToggle from '@/components/theme-toggle';
 import {
   categories,
   categoryById,
@@ -15,64 +16,66 @@ export default function Home() {
   const coreCategories = coreCategoryIds.map((id) => categoryById[id]);
 
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#main-content">跳转到主要内容</a>
       <nav className="site-nav" aria-label="主导航">
-        <a className="wordmark" href="#top" aria-label="dLLM Reading Map 首页">
-          <span className="wordmark-mark" aria-hidden="true" />
-          dLLM / reading map
-        </a>
-        <div className="nav-links">
-          <a href="#start">从这里开始</a>
-          <a href="#map">方法地图</a>
-          <a href="#library">论文库</a>
-          <a href="#resources">学习资源</a>
-          <a href="#updates">如何更新</a>
+        <div className="nav-inner">
+          <a className="wordmark" href="#top" aria-label="dLLM Reading Map 首页">
+            <strong>dLLM Reading Map</strong>
+            <span>Diffusion Language Models</span>
+          </a>
+          <div className="nav-links">
+            <a href="#start">阅读路径</a>
+            <a href="#map">方法分类</a>
+            <a href="#library">论文库</a>
+            <a href="#resources">学习资源</a>
+            <a href="#updates">更新机制</a>
+          </div>
+          <div className="nav-actions">
+            <ThemeToggle />
+            <a className="nav-lab" href="https://zju-pil-lab.github.io/" target="_blank" rel="noreferrer">PIL Lab</a>
+            <a
+              className="nav-github"
+              href="https://github.com/zju-pil-lab/dllm-reading-map"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+          </div>
         </div>
-        <a
-          className="nav-github"
-          href="https://github.com/zju-pil-lab/dllm-reading-map"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open source ↗
-        </a>
       </nav>
 
+      <main id="main-content" tabIndex={-1}>
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> A FIELD GUIDE · OCT 2026</p>
+          <p className="eyebrow">A RESEARCH INDEX · OCTOBER 2026</p>
           <h1>
             从 <em>Mask</em> 到 <em>Flow</em>，<br />
             读懂扩散语言模型。
           </h1>
           <p className="hero-deck">
-            为学生与研究者整理的开放阅读地图。沿着方法脉络学习，
-            用时间线追踪变化，而不是在一张越来越长的论文清单里迷路。
+            面向学生与研究者的开放学术索引。沿方法脉络建立知识结构，以首次公开日期追踪进展，并将论文、课程与长文连接为可执行的阅读路径。
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#start">从 12 篇开始 <span>→</span></a>
-            <a className="button button-secondary" href="#library">浏览全部论文</a>
+            <a className="button button-primary" href="#start">从 12 篇开始</a>
+            <a className="plain-link" href="#library">浏览全部论文 →</a>
           </div>
         </div>
 
-        <div className="denoise-card" aria-label="Token 去噪过程示意">
-          <div className="denoise-head">
-            <span>DENOISING TRACE</span><span>t ↓</span>
+        <aside className="collection-summary" aria-labelledby="collection-title">
+          <div className="summary-heading">
+            <h2 id="collection-title">Collection summary</h2>
+            <span>Verified 2026.10.13</span>
           </div>
-          <div className="trace-row trace-muted"><span>1.00</span><code>[MASK] [MASK] [MASK] [MASK]</code></div>
-          <div className="trace-row"><span>0.67</span><code>diffusion [MASK] models [MASK]</code></div>
-          <div className="trace-row"><span>0.33</span><code>diffusion language models [MASK]</code></div>
-          <div className="trace-row trace-final"><span>0.00</span><code>all tokens, together.</code></div>
-          <div className="noise-field" aria-hidden="true" />
-          <p className="trace-caption">A tiny visual intuition — not a sampler specification.</p>
-        </div>
-      </section>
-
-      <section className="stats" aria-label="论文库概况">
-        <div><strong>{papers.length}</strong><span>篇精选论文<br />持续维护</span></div>
-        <div><strong>81/81</strong><span>Sander 博客<br />参考文献已收录</span></div>
-        <div><strong>{categories.length}</strong><span>研究方向<br />交叉索引</span></div>
-        <div className="stats-note"><span className="status-dot" />VERIFIED<br />2026.10.13</div>
+          <dl>
+            <div><dt>Curated papers</dt><dd>{papers.length}</dd></div>
+            <div><dt>Core reading path</dt><dd>12</dd></div>
+            <div><dt>Research categories</dt><dd>{categories.length}</dd></div>
+            <div><dt>Sander references</dt><dd>81 / 81</dd></div>
+          </dl>
+          <p>类别构成主地图；时间、阅读层级与标签作为交叉索引。所有条目优先链接至论文的一手记录。</p>
+        </aside>
       </section>
 
       <section className="section path-section" id="start">
@@ -125,9 +128,9 @@ export default function Home() {
 
       <section className="section map-section" id="map">
         <div className="section-heading">
-          <p className="eyebrow"><span /> BROWSE BY FAMILY</p>
+          <p className="eyebrow">BROWSE BY RESEARCH FAMILY</p>
           <h2>方法分类与<br />时间索引</h2>
-          <p>方法类别刻画生成范式，研究方向覆盖系统、评测与智能体等关键问题；训练目标和具体能力通过标签交叉索引。</p>
+          <p>以离散扩散、连续扩散、Flow 与混合架构为方法主线，并将系统、智能体等研究问题纳入同一索引。点击任一类别即可进入对应论文列表。</p>
         </div>
         <div className="family-grid">
           {coreCategories.map((category, index) => {
@@ -138,9 +141,11 @@ export default function Home() {
                 href={`?category=${category.id}#library`}
                 key={category.id}
               >
-                <span className="family-index">{String(index + 1).padStart(2, '0')}</span>
-                <span className="family-label">{category.label}</span>
-                <h3>{category.zh}</h3>
+                <span className="family-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <div className="family-title">
+                  <span className="family-label">{category.label}</span>
+                  <h3>{category.zh}</h3>
+                </div>
                 <p>{category.description}</p>
                 <div className="family-foot"><code>{category.formula}</code><span>{count} papers ↘</span></div>
               </a>
@@ -197,13 +202,13 @@ export default function Home() {
 
       <section className="update-section" id="updates">
         <div className="update-lead">
-          <p className="eyebrow"><span /> LIVING COLLECTION</p>
+          <p className="eyebrow">MAINTENANCE</p>
           <h2>论文收录与<br />更新机制</h2>
         </div>
         <div className="update-steps">
-          <article><span>01 / DISCOVER</span><h3>每周发现</h3><p>按 dLLM、masked diffusion、flow map、agentic dLLM、tool use 等关键词检索 arXiv 候选。</p></article>
-          <article><span>02 / REVIEW</span><h3>人工审核</h3><p>自动化只创建候选清单；相关性、主分类和“为什么值得读”由实验室成员确认。</p></article>
-          <article><span>03 / PUBLISH</span><h3>合并即发布</h3><p>数据校验、去重与构建检查通过后，网页自动更新；用 first-posted 日期维护 Latest。</p></article>
+          <article><span>发现候选</span><h3>每周检索</h3><p>按 dLLM、masked diffusion、flow map、agentic dLLM、tool use 等关键词检索 arXiv 候选。</p></article>
+          <article><span>确认内容</span><h3>人工审核</h3><p>自动化只创建候选清单；相关性、主分类和“为什么值得读”由实验室成员确认。</p></article>
+          <article><span>发布记录</span><h3>校验上线</h3><p>数据校验、去重与构建检查通过后，网页自动更新；用 first-posted 日期维护 Latest。</p></article>
         </div>
       </section>
 
@@ -229,13 +234,14 @@ export default function Home() {
       </section>
 
       <footer>
-        <div><span className="wordmark-mark" />dLLM / READING MAP</div>
-        <p>OPEN, CURATED, BUILT FOR LEARNING.</p>
+        <div>dLLM Reading Map</div>
+        <p>Probabilistic Inference and Learning Lab</p>
         <p>
           <a href="https://github.com/zju-pil-lab/dllm-reading-map" target="_blank" rel="noreferrer">GITHUB ↗</a>
           {' · '}LAST VERIFIED · 2026.10.13
         </p>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }

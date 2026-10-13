@@ -1,5 +1,20 @@
 [
   {
+    "id": "discrete-beckmann-transport-blog-2026",
+    "type": "blog",
+    "title": "How to Train a One-Step Language Model Without a Teacher",
+    "creators": ["Sophia Tang", "Shiyi Wang"],
+    "source": "Discrete Beckmann Transport · Interactive Blog",
+    "year": 2026,
+    "url": "https://sophtang.github.io/discrete-beckmann-transport/blog/",
+    "level": "理论进阶",
+    "descriptionZh": "从离散生成的一步与少步瓶颈出发，以单纯形上的自治流和 Beckmann 守恒条件解释如何直接从数据学习时间无关流的端点映射，并介绍无需教师模型的一步生成与固定点迭代细化。",
+    "whyUsefulZh": "它是 Discrete Beckmann Transport 论文的交互式直觉伴读，适合串联单纯形 flow、flow map、无教师蒸馏替代方案，以及语言建模与推理中的一步生成。",
+    "tags": ["Discrete Beckmann Transport", "One-Step Language Modeling", "Autonomous Flow", "Fixed-Point Refinement", "Teacher-Free"],
+    "featured": true,
+    "lastVerified": "2026-10-13"
+  },
+  {
     "id": "sander-flow-maps-2026",
     "type": "blog",
     "title": "Learning the integral of a diffusion model",
