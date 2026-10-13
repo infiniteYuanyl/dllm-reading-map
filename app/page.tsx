@@ -72,7 +72,7 @@ export default function Home() {
         <div><strong>{papers.length}</strong><span>篇精选论文<br />持续维护</span></div>
         <div><strong>81/81</strong><span>Sander 博客<br />参考文献已收录</span></div>
         <div><strong>{categories.length}</strong><span>研究方向<br />交叉索引</span></div>
-        <div className="stats-note"><span className="status-dot" />VERIFIED<br />2026.10.12</div>
+        <div className="stats-note"><span className="status-dot" />VERIFIED<br />2026.10.13</div>
       </section>
 
       <section className="section path-section" id="start">
@@ -233,7 +233,7 @@ export default function Home() {
         <p>OPEN, CURATED, BUILT FOR LEARNING.</p>
         <p>
           <a href="https://github.com/zju-pil-lab/dllm-reading-map" target="_blank" rel="noreferrer">GITHUB ↗</a>
-          {' · '}LAST VERIFIED · 2026.10.12
+          {' · '}LAST VERIFIED · 2026.10.13
         </p>
       </footer>
     </main>
