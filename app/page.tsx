@@ -66,7 +66,7 @@ export default function Home() {
         <aside className="collection-summary" aria-labelledby="collection-title">
           <div className="summary-heading">
             <h2 id="collection-title">Collection summary</h2>
-            <span>Verified 2026.10.13</span>
+            <span>Verified 2026.10.15</span>
           </div>
           <dl>
             <div><dt>Curated papers</dt><dd>{papers.length}</dd></div>
@@ -238,7 +238,7 @@ export default function Home() {
         <p>Probabilistic Inference and Learning Lab</p>
         <p>
           <a href="https://github.com/zju-pil-lab/dllm-reading-map" target="_blank" rel="noreferrer">GITHUB ↗</a>
-          {' · '}LAST VERIFIED · 2026.10.13
+          {' · '}LAST VERIFIED · 2026.10.15
         </p>
       </footer>
       </main>

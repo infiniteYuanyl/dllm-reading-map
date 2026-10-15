@@ -494,5 +494,21 @@
     "whyReadZh": "提出训练-free 的稀疏跳率 proposal control，为离散扩散与 dLLM 的 tilted sampling 提供保持目标路径不变的机制；当前在有限状态 CTMC 与 Ising 任务验证，代表从权重重采样走向 proposal 设计的最新方向。",
     "sourceCollections": ["curated-2026", "dam-citation-network-2026"],
     "lastVerified": "2026-10-13"
+  },
+  {
+    "id": "arxiv:2610.13834",
+    "title": "On the Design Space of Continuous Diffusion Language Models",
+    "authors": ["Oscar Davis", "Daan Roos", "Alice Bizeul", "Amitis Shidani", "Victor Turrisi", "Louis Béthune", "Pierre Ablin", "Marco Cuturi"],
+    "year": 2026,
+    "published": "2026-10-09",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2610.13834",
+    "category": "continuous",
+    "tags": ["continuous-diffusion", "self-conditioning", "embedding-geometry", "token-identifiability", "DoubleCat", "SemiCat", "hybrid-corruption"],
+    "tier": "frontier",
+    "essentialOrder": null,
+    "whyReadZh": "分析自条件如何缓解训练与推理的状态分布失配，以无需额外前向计算的 DoubleCat 和加入离散揭示的 SemiCat 改进连续语言生成，并研究 token 可辨识性与 embedding 几何，为连续 dLLM 的训练设计提供消融依据。",
+    "sourceCollections": ["curated-2026"],
+    "lastVerified": "2026-10-15"
   }
 ]
