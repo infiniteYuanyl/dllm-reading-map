@@ -13,6 +13,7 @@ export type Paper = {
   published: string;
   venue: string;
   url: string;
+  codeUrl?: string;
   category: string;
   tags: string[];
   tier: PaperTier;

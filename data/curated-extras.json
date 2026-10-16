@@ -510,5 +510,22 @@
     "whyReadZh": "分析自条件如何缓解训练与推理的状态分布失配，以无需额外前向计算的 DoubleCat 和加入离散揭示的 SemiCat 改进连续语言生成，并研究 token 可辨识性与 embedding 几何，为连续 dLLM 的训练设计提供消融依据。",
     "sourceCollections": ["curated-2026"],
     "lastVerified": "2026-10-15"
+  },
+  {
+    "id": "arxiv:2610.12879",
+    "title": "One-Step Text Generation by Seq-Drifting",
+    "authors": ["Jiayu Liu", "Ruizhi Zhao", "Tianyun Ji", "Yee Whye Teh", "Zhenya Huang", "Ning Miao"],
+    "year": 2026,
+    "published": "2026-10-09",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2610.12879",
+    "codeUrl": "https://github.com/jyliu-ai/Seq-Drifting",
+    "category": "flow",
+    "tags": ["one-step-generation", "Seq-Drifting", "continuous-token-representations", "context-dependent-supervision", "attraction-repulsion", "spherical-geometry"],
+    "tier": "frontier",
+    "essentialOrder": null,
+    "whyReadZh": "将 drifting 推广到连续 token 表示序列，通过依赖当前生成上下文的吸引与排斥场，直接训练一次前向生成整段文本的映射。它并非对已有扩散轨迹的蒸馏，可与 Flow Maps 和少步 dLLM 对照阅读。",
+    "sourceCollections": ["curated-2026"],
+    "lastVerified": "2026-10-16"
   }
 ]

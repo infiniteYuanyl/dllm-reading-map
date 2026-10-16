@@ -39,7 +39,7 @@ const themeScript = `
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: 'dLLM Reading Map · 扩散语言模型阅读地图',
-  description: '113 篇扩散语言模型论文与精选学习资源：12 篇必读路径、方法分类、智能体方向、时间筛选与持续更新。',
+  description: '114 篇扩散语言模型论文与精选学习资源：12 篇必读路径、方法分类、智能体方向、时间筛选与持续更新。',
   alternates: { canonical: canonicalUrl },
   icons: { icon: iconUrl },
   openGraph: {
