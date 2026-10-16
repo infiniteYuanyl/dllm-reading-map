@@ -527,5 +527,21 @@
     "whyReadZh": "将 drifting 推广到连续 token 表示序列，通过依赖当前生成上下文的吸引与排斥场，直接训练一次前向生成整段文本的映射。它并非对已有扩散轨迹的蒸馏，可与 Flow Maps 和少步 dLLM 对照阅读。",
     "sourceCollections": ["curated-2026"],
     "lastVerified": "2026-10-16"
+  },
+  {
+    "id": "arxiv:2610.02665",
+    "title": "Large Language Continuous Diffusion Models",
+    "authors": ["Zhihan Yang", "Wei Guo", "Jean-Marie Lemercier", "Simon Welker", "Yonggan Fu", "Mohammad Mahdi Kamani", "Sajad Norouzi", "Julius Berner", "Tomas Geffner", "Karsten Kreis", "Yongxin Chen", "Molei Tao", "John Thickstun", "Pavlo Molchanov", "Ante Jukić", "Arash Vahdat", "Morteza Mardani"],
+    "year": 2026,
+    "published": "2026-10-02",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2610.02665",
+    "category": "continuous",
+    "tags": ["Sigma", "continuous-diffusion", "3B/8B", "blockwise-generation", "AR-warm-start", "classifier-free-guidance", "score-temperature", "few-step-distillation"],
+    "tier": "frontier",
+    "essentialOrder": null,
+    "whyReadZh": "将连续 token 扩散扩展到 3B/8B 规模，以 AR 权重热启动并联合学习低维 embedding；分析 CFG、score temperature 与少步蒸馏对数学推理和代码生成的作用，为比较连续与离散 dLLM 的生成质量、多样性和推理成本提供大规模实验依据。",
+    "sourceCollections": ["curated-2026"],
+    "lastVerified": "2026-10-16"
   }
 ]
