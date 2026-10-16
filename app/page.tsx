@@ -51,8 +51,8 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">A RESEARCH INDEX · OCTOBER 2026</p>
           <h1>
-            从 <em>Mask</em> 到 <em>Flow</em>，<br />
-            读懂扩散语言模型。
+            扩散语言模型<br />
+            论文与学习资源
           </h1>
           <p className="hero-deck">
             面向学生与研究者的开放学术索引。沿方法脉络建立知识结构，以首次公开日期追踪进展，并将论文、课程与长文连接为可执行的阅读路径。
