@@ -44,5 +44,21 @@
     "tags": ["Discrete Diffusion", "Discrete Flow Matching", "Flow Maps", "Schrödinger Bridges"],
     "featured": false,
     "lastVerified": "2026-10-12"
+  },
+  {
+    "id": "alex-wang-associative-memory-2026",
+    "type": "blog",
+    "title": "You could have invented transformers from memory",
+    "creators": ["Alex Wang"],
+    "source": "Alex Wang · Interactive Blog",
+    "year": 2026,
+    "url": "https://alexwang.ai/posts/associative-memory/",
+    "codeUrl": "https://github.com/KeAWang/associative-memory-blog",
+    "level": "基础背景 · Transformer 与联想记忆",
+    "descriptionZh": "从外积记忆和最小二乘出发，将线性层、MLP 与 self-attention 解释为联想记忆，用检索干扰与容量比较不同结构，并配有交互演示和实验代码。",
+    "whyUsefulZh": "作为 Transformer 架构的背景阅读，帮助区分权重中的参数化记忆与上下文中的非参数化检索，而非扩散方法教程。文中的容量估计基于随机键值与单层检索假设，不等同于训练后语言模型的知识容量。",
+    "tags": ["Associative Memory", "Transformer", "Self-Attention", "MLP", "Memory Capacity"],
+    "featured": false,
+    "lastVerified": "2026-10-18"
   }
 ]

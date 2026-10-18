@@ -66,7 +66,7 @@ export default function Home() {
         <aside className="collection-summary" aria-labelledby="collection-title">
           <div className="summary-heading">
             <h2 id="collection-title">Collection summary</h2>
-            <span>Verified 2026.10.16</span>
+            <span>Verified 2026.10.18</span>
           </div>
           <dl>
             <div><dt>Curated papers</dt><dd>{papers.length}</dd></div>
@@ -193,7 +193,7 @@ export default function Home() {
               </div>
               <div className="learning-links">
                 <a href={resource.url} target="_blank" rel="noreferrer">{resource.type === 'course' ? '课程主页' : '阅读全文'} <span>↗</span></a>
-                {resource.codeUrl && <a href={resource.codeUrl} target="_blank" rel="noreferrer">课程代码 <span>↗</span></a>}
+                {resource.codeUrl && <a href={resource.codeUrl} target="_blank" rel="noreferrer">{resource.type === 'course' ? '课程代码' : '示例代码'} <span>↗</span></a>}
               </div>
             </article>
           ))}
@@ -238,7 +238,7 @@ export default function Home() {
         <p>Probabilistic Inference and Learning Lab</p>
         <p>
           <a href="https://github.com/zju-pil-lab/dllm-reading-map" target="_blank" rel="noreferrer">GITHUB ↗</a>
-          {' · '}LAST VERIFIED · 2026.10.16
+          {' · '}LAST VERIFIED · 2026.10.18
         </p>
       </footer>
       </main>
