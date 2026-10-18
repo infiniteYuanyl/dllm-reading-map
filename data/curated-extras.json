@@ -543,5 +543,22 @@
     "whyReadZh": "将连续 token 扩散扩展到 3B/8B 规模，以 AR 权重热启动并联合学习低维 embedding；分析 CFG、score temperature 与少步蒸馏对数学推理和代码生成的作用，为比较连续与离散 dLLM 的生成质量、多样性和推理成本提供大规模实验依据。",
     "sourceCollections": ["curated-2026"],
     "lastVerified": "2026-10-16"
+  },
+  {
+    "id": "arxiv:2610.14162",
+    "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+    "authors": ["Hermann Kumbong", "Ishan S. Khare", "Iddah Mlauzi", "Andrew Woen", "Charles Ding", "E. Kelly Buchanan", "Simran Arora", "Azalia Mirhoseini", "Christopher Ré"],
+    "year": 2026,
+    "published": "2026-10-09",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2610.14162",
+    "codeUrl": "https://github.com/HazyResearch/ncm",
+    "category": "latent",
+    "tags": ["NCM", "coarse-to-fine", "next-scale-prediction", "residual-VQ-VAE", "discrete-latents", "parallel-generation", "non-diffusion-baseline"],
+    "tier": "frontier",
+    "essentialOrder": null,
+    "whyReadZh": "用多尺度残差 VQ-VAE 将文本编码为层级离散潜变量，再由 Transformer 逐层生成、层内并行预测。它并非扩散去噪，而是潜空间语言生成的重要对照路线，适合比较表示压缩、顺序生成深度与每步计算成本对质量和速度的影响。",
+    "sourceCollections": ["curated-2026"],
+    "lastVerified": "2026-10-18"
   }
 ]
